@@ -1,5 +1,5 @@
 @media(max-width: 335px){
-    .cartas{
+    .jogo{
         flex-direction: column;
     }
 }

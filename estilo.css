@@ -1,6 +1,7 @@
 body{
     font-family: 'Roboto', sans-serif;
     background-color: #EEF9BF;
+    position: relative;
 }
 
 .topobar{
@@ -24,7 +25,30 @@ body{
     align-items: center;
 }
 
-.cartas{
+.jogo{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.jogo li{
+    width: 117px;
+    height: 146px;
+    background-color: #A7E9AF;
+    border: 1px solid #99CEA8;
+    border-radius: 5px;
+    position: relative;
+    margin: 17px;
+}
+
+.back{ 
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+    top: 50%;
+    margin-top: -50px;
 }
