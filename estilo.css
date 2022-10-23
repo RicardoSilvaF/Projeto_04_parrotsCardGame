@@ -18,3 +18,13 @@ body{
     color: #75B79E;
 }
 
+.area-geral{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cartas{
+    display: flex;
+    flex-wrap: wrap;
+}
