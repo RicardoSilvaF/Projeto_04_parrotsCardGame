@@ -26,6 +26,7 @@ body{
 }
 
 .jogo{
+    max-width: 1174px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -51,4 +52,18 @@ body{
     margin-left: -50px;
     top: 50%;
     margin-top: -50px;
+}
+
+.aberta{
+    width: 95%;
+    height: 95%;
+    left: 50%;
+    margin-left: -50%;
+    top: 50%;
+    margin-top: -60%;
+    position: absolute;
+}
+
+.escondido{
+    visibility: hidden;
 }
