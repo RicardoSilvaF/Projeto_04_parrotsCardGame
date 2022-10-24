@@ -2,4 +2,7 @@
     .jogo{
         flex-direction: column;
     }
+    .topobar p{
+        font-size: 36px;
+    }
 }
