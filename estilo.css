@@ -44,10 +44,15 @@ body{
     margin: 17px;
 }
 
+.carta{
+    position: absolute;
+    backface-visibility: hidden;
+    transition: all 1s;
+}
+
 .back{ 
     width: 100px;
     height: 100px;
-    position: absolute;
     left: 50%;
     margin-left: -50px;
     top: 50%;
@@ -61,9 +66,28 @@ body{
     margin-left: -50%;
     top: 50%;
     margin-top: -60%;
-    position: absolute;
 }
 
-.escondido{
-    visibility: hidden;
+.aberta {
+    transform: rotateY(180deg);
+}
+
+.acerto{
+    visibility: visible !important;
+}
+
+.virada .aberta {
+    transform: rotateY(0deg);
+}
+
+.virada .back {
+   transform: rotateY(-180deg);
+}
+
+.acerto .aberta {
+    transform: rotateY(0deg);
+}
+
+.acerto .back {
+   transform: rotateY(-180deg);
 }
