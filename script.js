@@ -3,6 +3,12 @@ let baralho = [];
 let contador = 0;
 let countJogadas = 0;
 let finalizador = 0;
+const cronometro = setInterval(tempo, 1000);
+var minutos = 0;
+var segundos = 0;
+let totalSegundos = 0;
+let reinicio;
+
 
 let quant = Number(prompt("Digite o número de cartas que deseja(apenas números pares de 4 a 14):"));
 while(quant % 2 !== 0 || quant<4 || quant>14){
@@ -63,12 +69,40 @@ function virar(elemento) {
     }
   }
 
-  function contadorDeJogadas(){
-    countJogadas ++;
-    if(finalizador == quant){
-        alert("Você ganhou em "+ countJogadas +" jogadas!");
-    }
-  }
+
+
 function comparador() { 
 	return Math.random() - 0.5; 
+}
+
+function tempo(){
+    segundos ++;
+    totalSegundos++;
+    // codigo de temporizador copiado e adaptado ao jogo
+    if (segundos == 60) { 
+        segundos = 0; 
+        minutos++; 
+    }
+    var temporizador = (minutos < 10 ? '0' + minutos : minutos) + ':' + (segundos < 10 ? '0' + segundos : segundos);
+    document.getElementById('relogio').innerText = temporizador;
+    return temporizador;
+}
+
+let stringSim = null;
+let stringNao = null;
+function contadorDeJogadas(){
+    countJogadas ++;
+    if(finalizador == quant){
+        clearInterval(cronometro);
+        alert("Você ganhou em "+ countJogadas +" jogadas e em "+ totalSegundos +" segundos!");
+        reinicio = prompt("Gostaria de jogar novamente? (sim/não)");
+        let stringSim = reinicio.match(/sim/i);
+        let stringNao = reinicio.match(/não/i);
+        if(stringSim !== null){
+            location.reload();
+        }
+        if(stringNao !== null){
+            alert("Voce já parou de jogar? :(");
+        }
+    }
 }

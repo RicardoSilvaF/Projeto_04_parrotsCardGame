@@ -5,7 +5,7 @@ body{
 }
 
 .topobar{
-    margin-top: 40px;
+    padding-top: 40px;
     margin-bottom: 30px;
     display: flex;
     justify-content: center;
@@ -91,4 +91,12 @@ body{
 
 .acerto .back {
    transform: rotateY(-180deg);
+}
+
+.classRelogio{
+    background-color: red;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 35px;
 }
